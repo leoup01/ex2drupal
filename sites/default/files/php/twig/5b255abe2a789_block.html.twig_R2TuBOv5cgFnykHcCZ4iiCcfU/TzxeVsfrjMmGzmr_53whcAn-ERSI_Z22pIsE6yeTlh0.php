@@ -1,7 +1,7 @@
 <?php
 
-/* block.html.twig */
-class __TwigTemplate_2b14f98ef4f9bb4b271ccc66dd0a76b118926783c53cb8003b4cd6f01807ce2a extends Twig_Template
+/* themes/bootstrap/templates/block/block.html.twig */
+class __TwigTemplate_320bd91da763324608295edf46171d56bca9e5304085560ea1c38b9b3a94b78a extends Twig_Template
 {
     public function __construct(Twig_Environment $env)
     {
@@ -16,8 +16,8 @@ class __TwigTemplate_2b14f98ef4f9bb4b271ccc66dd0a76b118926783c53cb8003b4cd6f0180
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $tags = array("set" => 29, "if" => 37, "block" => 41);
-        $filters = array("clean_class" => 31);
+        $tags = array("set" => 49, "if" => 58, "block" => 63);
+        $filters = array("clean_class" => 51);
         $functions = array();
 
         try {
@@ -40,45 +40,47 @@ class __TwigTemplate_2b14f98ef4f9bb4b271ccc66dd0a76b118926783c53cb8003b4cd6f0180
             throw $e;
         }
 
-        // line 29
-        $context["classes"] = array(0 => "block", 1 => ("block-" . \Drupal\Component\Utility\Html::getClass($this->getAttribute(        // line 31
-(isset($context["configuration"]) ? $context["configuration"] : null), "provider", array()))), 2 => ("block-" . \Drupal\Component\Utility\Html::getClass(        // line 32
-(isset($context["plugin_id"]) ? $context["plugin_id"] : null))));
-        // line 35
-        echo "<div";
+        // line 49
+        $context["classes"] = array(0 => "block", 1 => ("block-" . \Drupal\Component\Utility\Html::getClass($this->getAttribute(        // line 51
+(isset($context["configuration"]) ? $context["configuration"] : null), "provider", array()))), 2 => ("block-" . \Drupal\Component\Utility\Html::getClass(        // line 52
+(isset($context["plugin_id"]) ? $context["plugin_id"] : null))), 3 => "clearfix");
+        // line 56
+        echo "<section";
         echo $this->env->getExtension('Twig_Extension_Sandbox')->ensureToStringAllowed($this->env->getExtension('Drupal\Core\Template\TwigExtension')->escapeFilter($this->env, $this->getAttribute((isset($context["attributes"]) ? $context["attributes"] : null), "addClass", array(0 => (isset($context["classes"]) ? $context["classes"] : null)), "method"), "html", null, true));
         echo ">
   ";
-        // line 36
+        // line 57
         echo $this->env->getExtension('Twig_Extension_Sandbox')->ensureToStringAllowed($this->env->getExtension('Drupal\Core\Template\TwigExtension')->escapeFilter($this->env, (isset($context["title_prefix"]) ? $context["title_prefix"] : null), "html", null, true));
         echo "
   ";
-        // line 37
+        // line 58
         if ((isset($context["label"]) ? $context["label"] : null)) {
-            // line 38
+            // line 59
             echo "    <h2";
-            echo $this->env->getExtension('Twig_Extension_Sandbox')->ensureToStringAllowed($this->env->getExtension('Drupal\Core\Template\TwigExtension')->escapeFilter($this->env, (isset($context["title_attributes"]) ? $context["title_attributes"] : null), "html", null, true));
+            echo $this->env->getExtension('Twig_Extension_Sandbox')->ensureToStringAllowed($this->env->getExtension('Drupal\Core\Template\TwigExtension')->escapeFilter($this->env, $this->getAttribute((isset($context["title_attributes"]) ? $context["title_attributes"] : null), "addClass", array(0 => "block-title"), "method"), "html", null, true));
             echo ">";
             echo $this->env->getExtension('Twig_Extension_Sandbox')->ensureToStringAllowed($this->env->getExtension('Drupal\Core\Template\TwigExtension')->escapeFilter($this->env, (isset($context["label"]) ? $context["label"] : null), "html", null, true));
             echo "</h2>
   ";
         }
-        // line 40
+        // line 61
         echo "  ";
         echo $this->env->getExtension('Twig_Extension_Sandbox')->ensureToStringAllowed($this->env->getExtension('Drupal\Core\Template\TwigExtension')->escapeFilter($this->env, (isset($context["title_suffix"]) ? $context["title_suffix"] : null), "html", null, true));
         echo "
+
   ";
-        // line 41
+        // line 63
         $this->displayBlock('content', $context, $blocks);
-        // line 44
-        echo "</div>
+        // line 66
+        echo "</section>
+
 ";
     }
 
-    // line 41
+    // line 63
     public function block_content($context, array $blocks = array())
     {
-        // line 42
+        // line 64
         echo "    ";
         echo $this->env->getExtension('Twig_Extension_Sandbox')->ensureToStringAllowed($this->env->getExtension('Drupal\Core\Template\TwigExtension')->escapeFilter($this->env, (isset($context["content"]) ? $context["content"] : null), "html", null, true));
         echo "
@@ -87,7 +89,7 @@ class __TwigTemplate_2b14f98ef4f9bb4b271ccc66dd0a76b118926783c53cb8003b4cd6f0180
 
     public function getTemplateName()
     {
-        return "block.html.twig";
+        return "themes/bootstrap/templates/block/block.html.twig";
     }
 
     public function isTraitable()
@@ -97,7 +99,7 @@ class __TwigTemplate_2b14f98ef4f9bb4b271ccc66dd0a76b118926783c53cb8003b4cd6f0180
 
     public function getDebugInfo()
     {
-        return array (  82 => 42,  79 => 41,  74 => 44,  72 => 41,  67 => 40,  59 => 38,  57 => 37,  53 => 36,  48 => 35,  46 => 32,  45 => 31,  44 => 29,);
+        return array (  84 => 64,  81 => 63,  75 => 66,  73 => 63,  67 => 61,  59 => 59,  57 => 58,  53 => 57,  48 => 56,  46 => 52,  45 => 51,  44 => 49,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -110,6 +112,6 @@ class __TwigTemplate_2b14f98ef4f9bb4b271ccc66dd0a76b118926783c53cb8003b4cd6f0180
 
     public function getSourceContext()
     {
-        return new Twig_Source("", "block.html.twig", "core/themes/classy/templates/block/block.html.twig");
+        return new Twig_Source("", "themes/bootstrap/templates/block/block.html.twig", "C:\\wamp64\\www\\ex2drupal\\themes\\bootstrap\\templates\\block\\block.html.twig");
     }
 }

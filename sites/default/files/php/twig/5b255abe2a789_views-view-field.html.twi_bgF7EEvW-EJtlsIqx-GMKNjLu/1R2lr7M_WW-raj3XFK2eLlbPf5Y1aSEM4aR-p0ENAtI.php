@@ -1,7 +1,7 @@
 <?php
 
-/* core/themes/classy/templates/form/checkboxes.html.twig */
-class __TwigTemplate_e51171f4846ff0b04e0c5790295a524e5d19ff43110bd819c755ac84c3f6c3a7 extends Twig_Template
+/* core/modules/views/templates/views-view-field.html.twig */
+class __TwigTemplate_e76e48f11b9f9d103c336806e2ce1c13089319a161bd568c5913350cf1467628 extends Twig_Template
 {
     public function __construct(Twig_Environment $env)
     {
@@ -39,18 +39,13 @@ class __TwigTemplate_e51171f4846ff0b04e0c5790295a524e5d19ff43110bd819c755ac84c3f
             throw $e;
         }
 
-        // line 15
-        echo "<div";
-        echo $this->env->getExtension('Twig_Extension_Sandbox')->ensureToStringAllowed($this->env->getExtension('Drupal\Core\Template\TwigExtension')->escapeFilter($this->env, $this->getAttribute((isset($context["attributes"]) ? $context["attributes"] : null), "addClass", array(0 => "form-checkboxes"), "method"), "html", null, true));
-        echo ">";
-        echo $this->env->getExtension('Twig_Extension_Sandbox')->ensureToStringAllowed($this->env->getExtension('Drupal\Core\Template\TwigExtension')->escapeFilter($this->env, (isset($context["children"]) ? $context["children"] : null), "html", null, true));
-        echo "</div>
-";
+        // line 23
+        echo $this->env->getExtension('Twig_Extension_Sandbox')->ensureToStringAllowed($this->env->getExtension('Drupal\Core\Template\TwigExtension')->escapeFilter($this->env, (isset($context["output"]) ? $context["output"] : null), "html", null, true));
     }
 
     public function getTemplateName()
     {
-        return "core/themes/classy/templates/form/checkboxes.html.twig";
+        return "core/modules/views/templates/views-view-field.html.twig";
     }
 
     public function isTraitable()
@@ -60,7 +55,7 @@ class __TwigTemplate_e51171f4846ff0b04e0c5790295a524e5d19ff43110bd819c755ac84c3f
 
     public function getDebugInfo()
     {
-        return array (  43 => 15,);
+        return array (  43 => 23,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -73,6 +68,6 @@ class __TwigTemplate_e51171f4846ff0b04e0c5790295a524e5d19ff43110bd819c755ac84c3f
 
     public function getSourceContext()
     {
-        return new Twig_Source("", "core/themes/classy/templates/form/checkboxes.html.twig", "C:\\wamp64\\www\\ex2drupal\\core\\themes\\classy\\templates\\form\\checkboxes.html.twig");
+        return new Twig_Source("", "core/modules/views/templates/views-view-field.html.twig", "C:\\wamp64\\www\\ex2drupal\\core\\modules\\views\\templates\\views-view-field.html.twig");
     }
 }

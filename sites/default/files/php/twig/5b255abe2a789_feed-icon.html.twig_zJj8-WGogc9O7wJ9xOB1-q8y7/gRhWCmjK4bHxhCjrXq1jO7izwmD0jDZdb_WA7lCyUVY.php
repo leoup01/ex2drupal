@@ -1,7 +1,7 @@
 <?php
 
-/* core/themes/classy/templates/navigation/menu-local-task.html.twig */
-class __TwigTemplate_996e417d5548ab7cdc17b76293de501d409c6c0f5269324c6805f8a0cdd31089 extends Twig_Template
+/* core/modules/system/templates/feed-icon.html.twig */
+class __TwigTemplate_05d13092748bb45c41dfda92e92c48ff552a0f21388b0a988086c97370963cef extends Twig_Template
 {
     public function __construct(Twig_Environment $env)
     {
@@ -16,13 +16,13 @@ class __TwigTemplate_996e417d5548ab7cdc17b76293de501d409c6c0f5269324c6805f8a0cdd
     protected function doDisplay(array $context, array $blocks = array())
     {
         $tags = array();
-        $filters = array();
+        $filters = array("t" => 16);
         $functions = array();
 
         try {
             $this->env->getExtension('Twig_Extension_Sandbox')->checkSecurity(
                 array(),
-                array(),
+                array('t'),
                 array()
             );
         } catch (Twig_Sandbox_SecurityError $e) {
@@ -39,18 +39,23 @@ class __TwigTemplate_996e417d5548ab7cdc17b76293de501d409c6c0f5269324c6805f8a0cdd
             throw $e;
         }
 
-        // line 17
-        echo "<li";
-        echo $this->env->getExtension('Twig_Extension_Sandbox')->ensureToStringAllowed($this->env->getExtension('Drupal\Core\Template\TwigExtension')->escapeFilter($this->env, $this->getAttribute((isset($context["attributes"]) ? $context["attributes"] : null), "addClass", array(0 => (((isset($context["is_active"]) ? $context["is_active"] : null)) ? ("is-active") : (""))), "method"), "html", null, true));
-        echo ">";
-        echo $this->env->getExtension('Twig_Extension_Sandbox')->ensureToStringAllowed($this->env->getExtension('Drupal\Core\Template\TwigExtension')->escapeFilter($this->env, (isset($context["link"]) ? $context["link"] : null), "html", null, true));
-        echo "</li>
+        // line 15
+        echo "<a href=\"";
+        echo $this->env->getExtension('Twig_Extension_Sandbox')->ensureToStringAllowed($this->env->getExtension('Drupal\Core\Template\TwigExtension')->escapeFilter($this->env, (isset($context["url"]) ? $context["url"] : null), "html", null, true));
+        echo "\"";
+        echo $this->env->getExtension('Twig_Extension_Sandbox')->ensureToStringAllowed($this->env->getExtension('Drupal\Core\Template\TwigExtension')->escapeFilter($this->env, $this->getAttribute((isset($context["attributes"]) ? $context["attributes"] : null), "addClass", array(0 => "feed-icon"), "method"), "html", null, true));
+        echo ">
+  ";
+        // line 16
+        echo $this->env->getExtension('Twig_Extension_Sandbox')->ensureToStringAllowed($this->env->getExtension('Drupal\Core\Template\TwigExtension')->renderVar(t("Subscribe to @title", array("@title" => (isset($context["title"]) ? $context["title"] : null)))));
+        echo "
+</a>
 ";
     }
 
     public function getTemplateName()
     {
-        return "core/themes/classy/templates/navigation/menu-local-task.html.twig";
+        return "core/modules/system/templates/feed-icon.html.twig";
     }
 
     public function isTraitable()
@@ -60,7 +65,7 @@ class __TwigTemplate_996e417d5548ab7cdc17b76293de501d409c6c0f5269324c6805f8a0cdd
 
     public function getDebugInfo()
     {
-        return array (  43 => 17,);
+        return array (  50 => 16,  43 => 15,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -73,6 +78,6 @@ class __TwigTemplate_996e417d5548ab7cdc17b76293de501d409c6c0f5269324c6805f8a0cdd
 
     public function getSourceContext()
     {
-        return new Twig_Source("", "core/themes/classy/templates/navigation/menu-local-task.html.twig", "C:\\wamp64\\www\\ex2drupal\\core\\themes\\classy\\templates\\navigation\\menu-local-task.html.twig");
+        return new Twig_Source("", "core/modules/system/templates/feed-icon.html.twig", "C:\\wamp64\\www\\ex2drupal\\core\\modules\\system\\templates\\feed-icon.html.twig");
     }
 }

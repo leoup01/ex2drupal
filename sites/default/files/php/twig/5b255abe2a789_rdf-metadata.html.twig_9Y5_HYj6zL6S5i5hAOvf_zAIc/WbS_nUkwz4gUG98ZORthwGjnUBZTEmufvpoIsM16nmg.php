@@ -1,7 +1,7 @@
 <?php
 
-/* {# inline_template_start #}<div class="field-plugin-summary">{{ summary|safe_join("<br />") }}</div> */
-class __TwigTemplate_f821c77039c217f90bf7a8f976486c27a1fbd3d077f048bd0be538f78a56fbe7 extends Twig_Template
+/* core/modules/rdf/templates/rdf-metadata.html.twig */
+class __TwigTemplate_037fb65c6fc9feeb68b44fb8d2dada91360eb8a7e087e0d9f4fdaaade0c6a79a extends Twig_Template
 {
     public function __construct(Twig_Environment $env)
     {
@@ -15,14 +15,14 @@ class __TwigTemplate_f821c77039c217f90bf7a8f976486c27a1fbd3d077f048bd0be538f78a5
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $tags = array();
-        $filters = array("safe_join" => 1);
+        $tags = array("for" => 20);
+        $filters = array();
         $functions = array();
 
         try {
             $this->env->getExtension('Twig_Extension_Sandbox')->checkSecurity(
+                array('for'),
                 array(),
-                array('safe_join'),
                 array()
             );
         } catch (Twig_Sandbox_SecurityError $e) {
@@ -39,15 +39,24 @@ class __TwigTemplate_f821c77039c217f90bf7a8f976486c27a1fbd3d077f048bd0be538f78a5
             throw $e;
         }
 
-        // line 1
-        echo "<div class=\"field-plugin-summary\">";
-        echo $this->env->getExtension('Twig_Extension_Sandbox')->ensureToStringAllowed($this->env->getExtension('Drupal\Core\Template\TwigExtension')->renderVar($this->env->getExtension('Drupal\Core\Template\TwigExtension')->safeJoin($this->env, (isset($context["summary"]) ? $context["summary"] : null), "<br />")));
-        echo "</div>";
+        // line 20
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable((isset($context["metadata"]) ? $context["metadata"] : null));
+        foreach ($context['_seq'] as $context["_key"] => $context["attributes"]) {
+            // line 21
+            echo "  <span";
+            echo $this->env->getExtension('Twig_Extension_Sandbox')->ensureToStringAllowed($this->env->getExtension('Drupal\Core\Template\TwigExtension')->escapeFilter($this->env, $this->getAttribute($context["attributes"], "addClass", array(0 => "hidden"), "method"), "html", null, true));
+            echo "></span>
+";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['attributes'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
     }
 
     public function getTemplateName()
     {
-        return "{# inline_template_start #}<div class=\"field-plugin-summary\">{{ summary|safe_join(\"<br />\") }}</div>";
+        return "core/modules/rdf/templates/rdf-metadata.html.twig";
     }
 
     public function isTraitable()
@@ -57,7 +66,7 @@ class __TwigTemplate_f821c77039c217f90bf7a8f976486c27a1fbd3d077f048bd0be538f78a5
 
     public function getDebugInfo()
     {
-        return array (  43 => 1,);
+        return array (  47 => 21,  43 => 20,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -70,6 +79,6 @@ class __TwigTemplate_f821c77039c217f90bf7a8f976486c27a1fbd3d077f048bd0be538f78a5
 
     public function getSourceContext()
     {
-        return new Twig_Source("", "{# inline_template_start #}<div class=\"field-plugin-summary\">{{ summary|safe_join(\"<br />\") }}</div>", "");
+        return new Twig_Source("", "core/modules/rdf/templates/rdf-metadata.html.twig", "C:\\wamp64\\www\\ex2drupal\\core\\modules\\rdf\\templates\\rdf-metadata.html.twig");
     }
 }

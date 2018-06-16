@@ -1,7 +1,7 @@
 <?php
 
-/* core/themes/stable/templates/admin/field-ui-table.html.twig */
-class __TwigTemplate_765207f613bfa8cfd5c682bd7c13c594b6c0a21499702daea0c489ac456b796c extends Twig_Template
+/* {# inline_template_start #}{{ items | safe_join(separator) }} */
+class __TwigTemplate_6a27047eeba00af1c60ff2f4c59e9e614903a38f7c90d62ed5441a2edb82b31b extends Twig_Template
 {
     public function __construct(Twig_Environment $env)
     {
@@ -15,14 +15,14 @@ class __TwigTemplate_765207f613bfa8cfd5c682bd7c13c594b6c0a21499702daea0c489ac456
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $tags = array("include" => 44);
-        $filters = array();
+        $tags = array();
+        $filters = array("safe_join" => 1);
         $functions = array();
 
         try {
             $this->env->getExtension('Twig_Extension_Sandbox')->checkSecurity(
-                array('include'),
                 array(),
+                array('safe_join'),
                 array()
             );
         } catch (Twig_Sandbox_SecurityError $e) {
@@ -39,19 +39,13 @@ class __TwigTemplate_765207f613bfa8cfd5c682bd7c13c594b6c0a21499702daea0c489ac456
             throw $e;
         }
 
-        // line 43
-        echo "<div id=\"field-display-overview-wrapper\">
-  ";
-        // line 44
-        $this->loadTemplate("table.html.twig", "core/themes/stable/templates/admin/field-ui-table.html.twig", 44)->display($context);
-        // line 45
-        echo "</div>
-";
+        // line 1
+        echo $this->env->getExtension('Twig_Extension_Sandbox')->ensureToStringAllowed($this->env->getExtension('Drupal\Core\Template\TwigExtension')->renderVar($this->env->getExtension('Drupal\Core\Template\TwigExtension')->safeJoin($this->env, (isset($context["items"]) ? $context["items"] : null), (isset($context["separator"]) ? $context["separator"] : null))));
     }
 
     public function getTemplateName()
     {
-        return "core/themes/stable/templates/admin/field-ui-table.html.twig";
+        return "{# inline_template_start #}{{ items | safe_join(separator) }}";
     }
 
     public function isTraitable()
@@ -61,7 +55,7 @@ class __TwigTemplate_765207f613bfa8cfd5c682bd7c13c594b6c0a21499702daea0c489ac456
 
     public function getDebugInfo()
     {
-        return array (  48 => 45,  46 => 44,  43 => 43,);
+        return array (  43 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -74,6 +68,6 @@ class __TwigTemplate_765207f613bfa8cfd5c682bd7c13c594b6c0a21499702daea0c489ac456
 
     public function getSourceContext()
     {
-        return new Twig_Source("", "core/themes/stable/templates/admin/field-ui-table.html.twig", "C:\\wamp64\\www\\ex2drupal\\core\\themes\\stable\\templates\\admin\\field-ui-table.html.twig");
+        return new Twig_Source("", "{# inline_template_start #}{{ items | safe_join(separator) }}", "");
     }
 }
