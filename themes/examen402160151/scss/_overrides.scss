@@ -74,6 +74,27 @@ img {
   background-color:$blue1;
 }
 
+.footer {
+  margin-top: 45px;
+  padding-top: 35px;
+  padding-bottom: 36px;
+  border-top: 1px solid #E5E5E5;
+  background-color: $blue1;
+}
+
+.field--name-field-foto{
+  float:left;
+  margin:1em;
+  img{
+    max-height: 150px;
+    width:auto;
+  }
+}
+
+.field--name-body, .field--name-field-detalle{
+  float:inline-end;
+}
+
 //FIN PERSONALIZACION
 
 
@@ -87,14 +108,6 @@ ol, ul {
 // Page header.
 .page-header {
   margin-top: 0;
-}
-
-.footer {
-  margin-top: 45px;
-  padding-top: 35px;
-  padding-bottom: 36px;
-  border-top: 1px solid #E5E5E5;
-  background-color: $blue1;
 }
 
 // Paragraphs.
