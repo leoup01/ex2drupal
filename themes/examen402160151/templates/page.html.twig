@@ -52,15 +52,20 @@
  */
 #}
 {% set container = theme.settings.fluid_container ? 'container-fluid' : 'container' %}
-<div class="logo-container container"><img src="{{ directory }}/logolab.png" alt="main logo"/></div>
+<div class="logo-container">
+  <div class="row">
+    <div class="col-sm-12 col-md-3">
+      <img src="https://lh3.googleusercontent.com/w6HETKkYqGGh6pl7Ghi-aQeHCsNez0KLSpJfW0H8XYAVLWusaTgqaXPWHywpszEgC0ZO8JHBSpabo4Ql3dH4ipuHQqvlxv5xv2XJkxzjrqeB9avgBIJHq41ccvtYZq5MgYISqjGtxy7d81zSp13Ne8s9HZbxjduUXNioR5P8YTSdVHAokFWNV-3xrMqr2aEvEn5ddyE8YG4lIOTWR-lsXrH0XwXY9ydvMnQKgeHxOHT4h_Jd7CDx0BLGw5IvlkLdZ6pK-RSntYxfE13NOeIbhjk96ETio3rA_eflvoxRtb_suI9XaZ2eat4GMpZ1DiGDQo0ibQ94b2ALYXbIfYcM54rbK7VWCz-vod8ydms6as9vhvoHYFO2TdW3npAFxg7H_nL8EqEEx3eRnrsR5xZHy82wH_e6nJRGK0fzEuUmd7yM1FtNI5EhN-J5cl8bhJjIwOervTQTa5haaUk0l7ASOSNt8H46EW4KwjQJy8WJmcsX8WUbtJY8m8s3iZ_cmkS6pp87ny_rrcE6zWnDbx4TPBPJpDu78WgglaVvbZj81DuK7qz-ukLEDgnn-_tP-znNJqu14R-DVYOMSiMaDqtOvYLWiXTZXklUzs8fyaY=s700-no" alt="main logo"/>
+    </div>
+  </div>
+</div>
 {# Navbar #}
 {% if page.navigation or page.navigation_collapsible %}
   {% block navbar %}
     {%
       set navbar_classes = [
-        'navbar',
-        theme.settings.navbar_inverse ? 'navbar-inverse' : 'navbar-default',
-        theme.settings.navbar_position ? 'navbar-' ~ theme.settings.navbar_position|clean_class : container,
+        'navbar','navbar-custom',
+        theme.settings.navbar_position ? 'navbar-' ~ theme.settings.navbar_position|clean_class : nav-custom,
       ]
     %}
     <header{{ navbar_attributes.addClass(navbar_classes) }} id="navbar" role="banner">
@@ -162,7 +167,7 @@
 
 {% if page.footer %}
   {% block footer %}
-    <footer class="footer {{ container }}" role="contentinfo">
+    <footer class="footer" role="contentinfo">
       {{ page.footer }}
     </footer>
   {% endblock %}

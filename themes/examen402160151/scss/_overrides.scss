@@ -1,3 +1,10 @@
+$grey1 : #DBE3E0;
+$green1 : #4ED2DE;
+$blue1 : #7790A8;
+$white1 : #FFFFFF;
+$black1 : #53575A;
+$red1 : #9E0000;
+
 // @todo these should be their own CSS files and only included when
 // specific Drupal libraries are used.
 @import "component/alert";
@@ -18,6 +25,58 @@
 // jQuery UI style overrides.
 @import "jquery-ui/autocomplete";
 
+body{
+  background-color: $grey1;
+}
+
+p{
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+img {
+  width: 100%;
+}
+
+.logo-container{
+  background-color: $red1;
+  padding: 1em;
+}
+
+.navbar-custom{
+  background-color: $black1;
+  border-radius: 0px;
+}
+
+.navbar-custom a {
+  float: left;
+  display: block;
+  color: $grey1;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 17px;
+}
+
+.navbar-custom a:hover {
+  background: $blue1;
+  color: $black1;
+}
+
+.views-row{
+  background-color:$white1;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding: 0px 30px 30px 30px;
+  margin-bottom: 2em;
+}
+
+.btn-primary{
+  background-color:$blue1;
+}
+
+//FIN PERSONALIZACION
+
+
 ol, ul {
   padding-left: 1.5em;
   .popover &:last-child {
@@ -30,12 +89,12 @@ ol, ul {
   margin-top: 0;
 }
 
-// Footer.
 .footer {
   margin-top: 45px;
   padding-top: 35px;
   padding-bottom: 36px;
   border-top: 1px solid #E5E5E5;
+  background-color: $blue1;
 }
 
 // Paragraphs.

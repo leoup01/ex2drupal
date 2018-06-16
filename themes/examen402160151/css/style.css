@@ -6322,6 +6322,46 @@ body.toolbar-loading {
       background: #337ab7;
       color: #fff; }
 
+body {
+  background-color: #DBE3E0; }
+
+p {
+  text-align: justify;
+  text-justify: inter-word; }
+
+img {
+  width: 100%; }
+
+.logo-container {
+  background-color: #9E0000;
+  padding: 1em; }
+
+.navbar-custom {
+  background-color: #53575A;
+  border-radius: 0px; }
+
+.navbar-custom a {
+  float: left;
+  display: block;
+  color: #DBE3E0;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 17px; }
+
+.navbar-custom a:hover {
+  background: #7790A8;
+  color: #53575A; }
+
+.views-row {
+  background-color: #FFFFFF;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding: 0px 30px 30px 30px;
+  margin-bottom: 2em; }
+
+.btn-primary {
+  background-color: #7790A8; }
+
 ol, ul {
   padding-left: 1.5em; }
   .popover ol:last-child, .popover ul:last-child {
@@ -6334,7 +6374,8 @@ ol, ul {
   margin-top: 45px;
   padding-top: 35px;
   padding-bottom: 36px;
-  border-top: 1px solid #E5E5E5; }
+  border-top: 1px solid #E5E5E5;
+  background-color: #7790A8; }
 
 p:last-child,
 .form-group:last-child,
